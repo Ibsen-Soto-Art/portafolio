@@ -311,17 +311,24 @@
               <span class="project-status status-live">En producción</span>
             </div>
             <div class="project-body">
-              <h3>Gestión de Juicios Evaluativos — SENA</h3>
+              <h3>Sistema de Gestión de Juicios Evaluativos — SENA</h3>
               <p class="project-desc">
-                Aplicación web para el registro y la gestión centralizada de los juicios evaluativos
-                de los aprendices del SENA, desarrollada en el contexto de la formación ADSO. Permite
-                administrar de forma ordenada la información evaluativa que antes se manejaba de
-                manera dispersa.
+                Aplicación administrativa que reemplaza los reportes en Excel del SENA por una base
+                de datos relacional real. Gestiona el ciclo completo de formación de aprendices —
+                matrícula, fichas, resultados de aprendizaje y juicios evaluativos (Aprobado / No
+                Aprobado / Por evaluar) — e incluye un dashboard analítico centrado en deserción y
+                avance académico.
+              </p>
+              <p class="project-desc project-note">
+                Construida en <strong>PHP puro (sin framework)</strong> con acceso a datos vía PDO
+                y prepared statements, importación masiva desde exportaciones de Sofía Plus y PDFs
+                de proyecto formativo, y autenticación propia con bcrypt y roles (admin/evaluador).
+                Desplegada en producción con Docker detrás de Nginx.
               </p>
               <ul class="tech-tags">
-                <li>PHP</li><li>Laravel</li><li>MySQL</li>
+                <li>PHP 8.1</li><li>MySQL</li><li>PDO</li><li>Chart.js</li><li>Docker</li>
               </ul>
-              <p class="project-role">Rol: desarrollador full-stack</p>
+              <p class="project-role">Rol: desarrollador full-stack (backend, base de datos, seguridad y despliegue)</p>
               <a href="http://juicios_evaluativos.ibsen-soto.pro/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Ver proyecto ↗</a>
             </div>
           </article>
