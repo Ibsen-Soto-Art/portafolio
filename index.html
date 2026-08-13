@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ibsen Soto — Desarrollador de Software &amp; Biólogo</title>
+  <meta name="description" content="Portafolio profesional de Ibsen Alexis Soto Artunduaga, desarrollador de software (PHP, Laravel, MySQL, PostgreSQL, Docker) y biólogo. Aprendiz Tecnólogo ADSO — SENA.">
+  <meta name="author" content="Ibsen Alexis Soto Artunduaga">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ibsen Soto — Desarrollador de Software & Biólogo">
+  <meta property="og:description" content="Desarrollador de software con base científica: PHP, Laravel, MySQL, PostgreSQL, Docker. Proyectos en producción y formación como Tecnólogo ADSO (SENA).">
+  <meta property="og:image" content="assets/img/ibsen-soto.jpg">
+  <meta property="og:url" content="https://portafolio.ibsen-soto.pro/">
+  <meta property="og:locale" content="es_CO">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ibsen Soto — Desarrollador de Software & Biólogo">
+  <meta name="twitter:description" content="Portafolio profesional: proyectos web en producción, stack PHP/Laravel/MySQL/PostgreSQL/Docker.">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232563EB'/%3E%3Ctext x='50' y='68' font-size='55' font-family='monospace' fill='%23fff' text-anchor='middle'%3EIS%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#hero" class="logo">
+        <span class="logo-bracket">&lt;</span>Ibsen<span class="accent">.</span>Soto<span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#formacion">Formación</a></li>
+          <li><a href="#experiencia">Experiencia</a></li>
+          <li><a href="#contacto" class="btn btn-nav">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <button id="theme-toggle" class="icon-btn" aria-label="Cambiar modo claro/oscuro" title="Cambiar tema">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero">
+      <div class="container hero-inner">
+        <div class="hero-text reveal">
+          <p class="eyebrow">$ whoami</p>
+          <h1>Ibsen Alexis Soto Artunduaga</h1>
+          <p class="role">Desarrollador de Software · Biólogo<br class="role-break"> — Aprendiz Tecnólogo ADSO (SENA)</p>
+          <p class="hero-pitch">
+            Desarrollador de software con base científica: combino el rigor analítico de la
+            Biología con desarrollo web full-stack para construir soluciones confiables,
+            bien documentadas y orientadas a resolver problemas reales.
+          </p>
+          <div class="hero-cta">
+            <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+            <a href="assets/cv/Ibsen_Soto_CV.pdf" class="btn btn-secondary" download>Descargar CV</a>
+            <a href="#contacto" class="btn btn-ghost">Contactar</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="photo-frame">
+            <img src="assets/img/ibsen-soto.jpg" alt="Foto profesional de Ibsen Alexis Soto Artunduaga" id="profile-photo" onerror="this.style.display='none'; document.getElementById('photo-fallback').style.display='flex';">
+            <div class="photo-fallback" id="photo-fallback">
+              <span>IS</span>
+            </div>
+          </div>
+
+          <div class="terminal-block" aria-label="Bloque de tecnologías estilo terminal">
+            <div class="terminal-titlebar">
+              <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+              <span class="terminal-title">stack.sh</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="prompt">$</span> whoami</p>
+              <p class="terminal-out">Ibsen Soto — Fullstack Developer &amp; Biólogo</p>
+              <p><span class="prompt">$</span> <span id="typing-target"></span><span class="cursor">_</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SOBRE MÍ ===================== -->
+    <section class="section" id="sobre-mi">
+      <div class="container">
+        <p class="section-tag reveal">01 · Perfil</p>
+        <h2 class="section-title reveal">Sobre mí</h2>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              Soy <strong>biólogo profesional</strong> egresado de la Universidad de la Amazonía
+              (23 de agosto de 2023, promedio 4.10/5.0, Tarjeta Profesional de Biólogo) y actualmente
+              curso la <strong>Tecnología en Análisis y Desarrollo de Software (ADSO)</strong> del SENA,
+              con inicio de etapa productiva el 11 de noviembre de 2026.
+            </p>
+            <p>
+              Mi formación científica no es un dato anecdótico: la investigación de campo me entrenó
+              en <strong>pensamiento analítico</strong>, diseño metodológico, recolección rigurosa de
+              datos y comunicación técnica precisa. Esas mismas competencias las aplico hoy al desarrollo
+              de software — desde levantar requisitos con la formalidad de un SRS (IEEE 830) hasta
+              documentar arquitecturas y modelar bases de datos con criterio.
+            </p>
+            <p>
+              Antes de dar el salto al desarrollo, trabajé como <strong>Gestor de Proyectos en AT Ingenieros
+              Consultores S.A.S.</strong>, planificando cronogramas, coordinando equipos interdisciplinarios
+              y liderando proyectos de conservación ambiental. Esa experiencia en gestión se traduce
+              directamente en habilidades blandas transferibles a la gestión de proyectos de software:
+              planeación, comunicación con stakeholders y trabajo bajo objetivos.
+            </p>
+          </div>
+
+          <aside class="about-highlights reveal">
+            <div class="highlight-card">
+              <span class="highlight-icon">🔬</span>
+              <h3>Rigor científico</h3>
+              <p>Metodología de investigación aplicada a levantamiento de requisitos y análisis de datos.</p>
+            </div>
+            <div class="highlight-card">
+              <span class="highlight-icon">🧩</span>
+              <h3>Documentación seria</h3>
+              <p>SRS bajo IEEE 830, UML, arquitectura de software desde el primer día del proyecto.</p>
+            </div>
+            <div class="highlight-card">
+              <span class="highlight-icon">🤝</span>
+              <h3>Gestión de proyectos</h3>
+              <p>Experiencia real coordinando equipos, cronogramas y objetivos multidisciplinares.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section section-dark" id="skills">
+      <div class="container">
+        <p class="section-tag reveal">02 · Stack</p>
+        <h2 class="section-title reveal">Tecnologías y habilidades</h2>
+
+        <div class="skills-grid">
+          <div class="skill-category reveal">
+            <h3>Desarrollo web</h3>
+            <ul class="badge-list">
+              <li class="badge"><i class="devicon-php-plain colored"></i> PHP</li>
+              <li class="badge"><i class="devicon-laravel-original colored"></i> Laravel</li>
+              <li class="badge"><i class="devicon-html5-plain colored"></i> HTML5</li>
+              <li class="badge"><i class="devicon-css3-plain colored"></i> CSS3</li>
+              <li class="badge"><i class="devicon-javascript-plain colored"></i> JavaScript</li>
+              <li class="badge"><i class="devicon-typescript-plain colored"></i> TypeScript</li>
+            </ul>
+          </div>
+
+          <div class="skill-category reveal">
+            <h3>Bases de datos e infraestructura</h3>
+            <ul class="badge-list">
+              <li class="badge"><i class="devicon-mysql-plain colored"></i> MySQL</li>
+              <li class="badge"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</li>
+              <li class="badge"><i class="devicon-prisma-original colored"></i> Prisma ORM</li>
+              <li class="badge"><i class="devicon-docker-plain colored"></i> Docker</li>
+            </ul>
+          </div>
+
+          <div class="skill-category reveal">
+            <h3>Documentación y arquitectura</h3>
+            <ul class="badge-list">
+              <li class="badge">SRS (IEEE 830)</li>
+              <li class="badge">UML</li>
+              <li class="badge">Casos de uso</li>
+              <li class="badge">Arquitectura de software</li>
+            </ul>
+          </div>
+
+          <div class="skill-category reveal">
+            <h3>Programación y datos</h3>
+            <ul class="badge-list">
+              <li class="badge"><i class="devicon-r-original colored"></i> Lenguaje R</li>
+              <li class="badge">Análisis de datos</li>
+              <li class="badge">Visualización de información</li>
+            </ul>
+          </div>
+
+          <div class="skill-category reveal">
+            <h3>Herramientas</h3>
+            <ul class="badge-list">
+              <li class="badge"><i class="devicon-git-plain colored"></i> Git</li>
+              <li class="badge"><i class="devicon-github-original colored"></i> GitHub</li>
+              <li class="badge"><i class="devicon-vscode-plain colored"></i> VS Code</li>
+              <li class="badge">XAMPP</li>
+            </ul>
+          </div>
+
+          <div class="skill-category reveal">
+            <h3>Habilidades profesionales</h3>
+            <ul class="badge-list">
+              <li class="badge">Gestión de proyectos</li>
+              <li class="badge">Trabajo en equipo</li>
+              <li class="badge">Comunicación efectiva</li>
+              <li class="badge">Resolución de problemas</li>
+              <li class="badge">Pensamiento analítico</li>
+              <li class="badge">Aprendizaje autónomo</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROYECTOS ===================== -->
+    <section class="section section-dark" id="proyectos">
+      <div class="container">
+        <p class="section-tag reveal">03 · Trabajo</p>
+        <h2 class="section-title reveal">Proyectos destacados</h2>
+        <p class="section-subtitle reveal">Aplicaciones en producción y proyectos de arquitectura/documentación.</p>
+
+        <div class="projects-grid">
+
+          <!-- Compra y Listo -->
+          <article class="project-card reveal">
+            <div class="project-banner" data-tone="a">
+              <span class="project-banner-icon">🛒</span>
+              <span class="project-status status-live">En producción</span>
+            </div>
+            <div class="project-body">
+              <h3>Compra y Listo</h3>
+              <p class="project-desc">
+                Plataforma de e-commerce en producción, construida en PHP/MySQL con arquitectura
+                MVC personalizada. Roles de acceso diferenciados (Visitante, Gestor, Administrador),
+                importación/exportación de datos en Excel y envío de correos transaccionales con PHPMailer.
+              </p>
+              <p class="project-desc project-note">
+                <strong>Auditoría de seguridad propia:</strong> revisión del repositorio detectando
+                vulnerabilidades como contraseñas en texto plano, ausencia de protección CSRF y
+                endpoints sin autenticación — evidencia de conciencia en buenas prácticas de seguridad.
+              </p>
+              <ul class="tech-tags">
+                <li>PHP</li><li>MySQL</li><li>MVC</li><li>PHPMailer</li>
+              </ul>
+              <p class="project-role">Rol: desarrollador full-stack</p>
+              <a href="https://compraylisto.co/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Ver proyecto ↗</a>
+            </div>
+          </article>
+
+          <!-- FacturApp Neiva -->
+          <article class="project-card reveal">
+            <div class="project-banner" data-tone="b">
+              <span class="project-banner-icon">🧾</span>
+              <span class="project-status status-live">En producción</span>
+            </div>
+            <div class="project-body">
+              <h3>FacturApp Neiva</h3>
+              <p class="project-desc">
+                SaaS de facturación electrónica para microempresarios, orientado al cumplimiento
+                normativo DIAN (UBL 2.1, CUFE con SHA-384). SRS con 63 requisitos y plan de desarrollo
+                de 12 fases, sobre stack PHP/Laravel/MySQL con entorno Docker.
+              </p>
+              <ul class="tech-tags">
+                <li>PHP</li><li>Laravel</li><li>MySQL</li><li>Docker</li>
+              </ul>
+              <p class="project-role">Rol: desarrollador full-stack &amp; documentación técnica</p>
+              <a href="https://faceco.ibsen-soto.pro/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Ver proyecto ↗</a>
+            </div>
+          </article>
+
+          <!-- pantallascinetshop -->
+          <article class="project-card reveal">
+            <div class="project-banner" data-tone="c">
+              <span class="project-banner-icon">🖥️</span>
+              <span class="project-status status-live">En producción</span>
+            </div>
+            <div class="project-body">
+              <h3>Sistema de gestión — pantallascinetshop.com</h3>
+              <p class="project-desc">
+                Aplicación web (Laravel + MySQL) para digitalizar la gestión operativa de un negocio
+                propio de reventa de cuentas de streaming, en reemplazo de un sistema manual basado
+                en hojas de cálculo. Incluye documentación completa: SRS, arquitectura, base de datos
+                y diagramas UML.
+              </p>
+              <ul class="tech-tags">
+                <li>Laravel</li><li>MySQL</li><li>UML</li>
+              </ul>
+              <p class="project-role">Rol: desarrollador full-stack &amp; propietario del producto</p>
+              <a href="https://pantallascinetshop.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Ver proyecto ↗</a>
+            </div>
+          </article>
+
+          <!-- Juicios Evaluativos -->
+          <article class="project-card reveal">
+            <div class="project-banner" data-tone="d">
+              <span class="project-banner-icon">📋</span>
+              <span class="project-status status-live">En producción</span>
+            </div>
+            <div class="project-body">
+              <h3>Gestión de Juicios Evaluativos — SENA</h3>
+              <p class="project-desc">
+                Aplicación web para el registro y la gestión centralizada de los juicios evaluativos
+                de los aprendices del SENA, desarrollada en el contexto de la formación ADSO. Permite
+                administrar de forma ordenada la información evaluativa que antes se manejaba de
+                manera dispersa.
+              </p>
+              <ul class="tech-tags">
+                <li>PHP</li><li>Laravel</li><li>MySQL</li>
+              </ul>
+              <p class="project-role">Rol: desarrollador full-stack</p>
+              <a href="http://juicios_evaluativos.ibsen-soto.pro/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Ver proyecto ↗</a>
+            </div>
+          </article>
+
+          <!-- EscudoLab -->
+          <article class="project-card reveal">
+            <div class="project-banner" data-tone="e">
+              <span class="project-banner-icon">🛡️</span>
+              <span class="project-status status-progress">En documentación / desarrollo</span>
+            </div>
+            <div class="project-body">
+              <h3>EscudoLab</h3>
+              <p class="project-desc">
+                Plataforma de gamificación en ciberseguridad dirigida a estudiantes, empresas e
+                instituciones públicas. Lideré la fase de documentación técnica y arquitectura:
+                Visión Técnica, Guía de Documentación Maestra y SRS bajo IEEE 830
+                (17 requisitos funcionales, 15 no funcionales, priorización MoSCoW).
+              </p>
+              <ul class="tech-tags">
+                <li>Laravel 11</li><li>Vue 3</li><li>PostgreSQL</li><li>Docker</li>
+              </ul>
+              <p class="project-role">Rol: arquitectura de software &amp; documentación técnica</p>
+              <span class="btn btn-ghost btn-sm btn-disabled">En documentación</span>
+            </div>
+          </article>
+
+          <!-- SpeakSoftw -->
+          <article class="project-card reveal">
+            <div class="project-banner" data-tone="f">
+              <span class="project-banner-icon">🗣️</span>
+              <span class="project-status status-progress">Proyecto grupal</span>
+            </div>
+            <div class="project-body">
+              <h3>SpeakSoftw (englishADSO)</h3>
+              <p class="project-desc">
+                Plataforma web para práctica de inglés dirigida a aprendices ADSO del SENA. Desarrollo
+                full-stack colaborativo: HTML, CSS y JavaScript/TypeScript en el frontend, con Prisma
+                para el modelado de la base de datos. Trabajo en equipo con control de versiones en Git/GitHub.
+              </p>
+              <ul class="tech-tags">
+                <li>HTML</li><li>CSS</li><li>TypeScript</li><li>Prisma</li>
+              </ul>
+              <p class="project-role">Rol: desarrollador frontend &amp; modelado de datos</p>
+              <a href="https://github.com/DF-VeraP/englishADSO" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Ver repositorio ↗</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FORMACIÓN ===================== -->
+    <section class="section" id="formacion">
+      <div class="container">
+        <p class="section-tag reveal">04 · Formación</p>
+        <h2 class="section-title reveal">Formación académica</h2>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">En formación — etapa productiva desde nov. 2026</span>
+              <h3>Tecnólogo en Análisis y Desarrollo de Software (ADSO)</h3>
+              <p class="timeline-institution">SENA</p>
+              <p>Formación en desarrollo de software, bases de datos, ingeniería de requisitos y trabajo colaborativo con control de versiones.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Graduado — 23 de agosto de 2023</span>
+              <h3>Profesional en Biología</h3>
+              <p class="timeline-institution">Universidad de la Amazonía · Promedio 4.10/5.0 · Tarjeta Profesional de Biólogo (Resolución 13, 1 dic 2023)</p>
+              <p>
+                Trabajo de grado: <em>«Peces de Importancia Económica para los Pescadores Locales de
+                Puerto Arango, Corregimiento de Venecia, Municipio de Florencia – Caquetá»</em>.
+                Investigación de campo con encuestas semiestructuradas y determinación taxonómica de
+                16 especies ícticas — base sólida en metodología de investigación y análisis de datos.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2018</span>
+              <h3>Estudios en Biotecnología (1 semestre)</h3>
+              <p class="timeline-institution">Institución Universitaria Colegio Mayor de Antioquia</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2017</span>
+              <h3>Bachiller Académico con Profundización en Ciencias Naturales</h3>
+              <p class="timeline-institution">Institución Educativa Los Pinos</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="sub-heading reveal">Certificaciones y formación complementaria</h3>
+        <div class="cert-grid">
+          <div class="cert-card reveal">
+            <h4>Desarrollo de Aplicaciones Web con PHP</h4>
+            <p>SENA, Centro Tecnológico de la Amazonia · 80 horas · 23 sept. 2025</p>
+          </div>
+          <div class="cert-card reveal">
+            <h4>Inglés Básico – Nivel 3</h4>
+            <p>SENA, Centro Tecnológico de la Amazonia · 48 horas · 17 jun. 2026</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCIA ===================== -->
+    <section class="section section-dark" id="experiencia">
+      <div class="container">
+        <p class="section-tag reveal">05 · Experiencia</p>
+        <h2 class="section-title reveal">Experiencia laboral</h2>
+
+        <div class="experience-card reveal">
+          <div class="experience-header">
+            <h3>Gestor de Proyectos</h3>
+            <span class="experience-date">5 ene. 2023 – 15 ene. 2024</span>
+          </div>
+          <p class="experience-company">AT Ingenieros Consultores S.A.S.</p>
+          <p>
+            Planificación y ejecución de proyectos de conservación ambiental: elaboración de
+            cronogramas, coordinación de equipos interdisciplinarios, gestión ambiental y
+            comunicación con múltiples partes interesadas.
+          </p>
+          <ul class="tech-tags">
+            <li>Liderazgo</li><li>Gestión de información</li><li>Planeación estratégica</li><li>Trabajo bajo objetivos</li><li>Adaptación</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTO ===================== -->
+    <section class="section" id="contacto">
+      <div class="container contact-grid">
+        <div class="contact-info reveal">
+          <p class="section-tag">06 · Contacto</p>
+          <h2 class="section-title">Hablemos</h2>
+          <p class="section-subtitle">
+            Disponible para vincularme a etapa productiva / práctica profesional desde
+            <strong> noviembre de 2026</strong>, y abierto a oportunidades como desarrollador
+            de software o analista programador.
+          </p>
+
+          <ul class="contact-list">
+            <li>
+              <a href="https://wa.me/573217781684" target="_blank" rel="noopener noreferrer">
+                <i class="devicon-whatsapp WhatsApp colored"></i>
+                <span>+57 321 7781684</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:ibsensotart23@gmail.com">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+                <span>ibsensotart23@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/Ibsen-Soto-Art" target="_blank" rel="noopener noreferrer">
+                <i class="devicon-github-original colored"></i>
+                <span>github.com/Ibsen-Soto-Art</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact-form reveal" id="contact-form">
+          <!--
+            Formulario listo para dos modos de envío:
+            1) mailto: (por defecto, no requiere backend)
+            2) Formspree: cambia data-mode a "formspree" y define action="https://formspree.io/f/TU_ID"
+          -->
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="email">Correo</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Enviar mensaje</button>
+          <p class="form-note" id="form-note"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Ibsen Alexis Soto Artunduaga. Todos los derechos reservados.</p>
+      <div class="footer-links">
+        <a href="https://github.com/Ibsen-Soto-Art" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="mailto:ibsensotart23@gmail.com">Correo</a>
+        <a href="https://wa.me/573217781684" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
