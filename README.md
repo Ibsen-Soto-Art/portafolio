@@ -11,33 +11,37 @@ Portafolio/
 ├── css/
 │   └── style.css           # Sistema de diseño (variables, layout, responsive, dark/light)
 ├── js/
-│   └── main.js             # Typing effect, scroll reveal, menú móvil, tema, formulario
+│   ├── i18n.js              # Diccionario ES/EN y aplicación de idioma (data-i18n)
+│   └── main.js              # Typing effect, scroll reveal, menú móvil, tema, formulario
 ├── assets/
 │   ├── img/
-│   │   └── ibsen-soto.jpg  # ← reemplazar con la foto profesional real (ver README-placeholder.txt)
+│   │   └── ibsen-soto.jpg  # Foto profesional
 │   └── cv/
-│       └── Ibsen_Soto_CV.pdf  # ← reemplazar con el CV real (ver README-placeholder.txt)
+│       └── Ibsen_Soto_CV.pdf  # CV descargable
 └── README.md
 ```
 
 No hay paso de build: es HTML/CSS/JS plano, listo para copiar tal cual a producción.
 
-## Completar contenido pendiente
+## Idioma (ES/EN)
 
-Antes de publicar:
+El botón "ES/EN" del header alterna todo el contenido visible entre español e inglés,
+sin recargar la página. La traducción vive en `js/i18n.js` como un diccionario por
+clave (`data-i18n="clave"` en el HTML). Para editar textos:
 
-1. Añade la foto profesional en `assets/img/ibsen-soto.jpg` (formato cuadrado,
-   fondo oscuro, traje formal — ver notas en `assets/img/README-placeholder.txt`).
-   Mientras no exista el archivo, el sitio muestra automáticamente un placeholder
-   con las iniciales "IS".
-2. Añade el CV en `assets/cv/Ibsen_Soto_CV.pdf` (ver `assets/cv/README-placeholder.txt`).
-3. (Opcional) Elimina los dos archivos `README-placeholder.txt` una vez agregados
-   los archivos reales — no afectan el sitio, son solo notas.
-4. (Opcional) Si prefieres recibir los mensajes del formulario de contacto por
-   Formspree en vez de `mailto:`, edita `js/main.js`:
-   - Cambia `FORM_MODE` de `'mailto'` a `'formspree'`.
-   - Reemplaza `FORMSPREE_ENDPOINT` con tu URL real de Formspree
-     (`https://formspree.io/f/TU_ID`).
+- Contenido en español: edítalo directamente en `index.html` (es el idioma por defecto,
+  el que ven los buscadores y quien entra sin JS).
+- Contenido en inglés: edita la clave correspondiente en el objeto `en` de `js/i18n.js`.
+- Para agregar un texto nuevo a traducir: ponle `data-i18n="seccion.clave"` en el HTML
+  y añade esa misma clave en `TRANSLATIONS.es` y `TRANSLATIONS.en`.
+
+## Notas adicionales
+
+- Si prefieres recibir los mensajes del formulario de contacto por Formspree en vez
+  de `mailto:`, edita `js/main.js`:
+  - Cambia `FORM_MODE` de `'mailto'` a `'formspree'`.
+  - Reemplaza `FORMSPREE_ENDPOINT` con tu URL real de Formspree
+    (`https://formspree.io/f/TU_ID`).
 
 ## Despliegue en Nginx (subdominio `portafolio.ibsen-soto.pro`)
 

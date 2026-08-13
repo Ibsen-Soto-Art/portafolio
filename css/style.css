@@ -141,6 +141,17 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
   transition: background var(--transition);
 }
 .icon-btn:hover { background: var(--border); }
+
+.lang-btn {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+  border: 1.5px solid var(--border);
+}
+.lang-btn:hover { border-color: var(--accent); background: var(--border); }
+
 .icon-moon { display: none; }
 [data-theme="dark"] .icon-sun { display: none; }
 [data-theme="dark"] .icon-moon { display: block; }

@@ -158,11 +158,13 @@ function initContactForm() {
     const email = form.email.value.trim();
     const message = form.message.value.trim();
 
+    const dict = TRANSLATIONS[typeof getCurrentLang === 'function' ? getCurrentLang() : 'es'];
+
     if (FORM_MODE === 'mailto') {
       const subject = encodeURIComponent(`Contacto desde portafolio — ${name}`);
       const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
       window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
-      note.textContent = 'Se abrirá tu cliente de correo para enviar el mensaje.';
+      note.textContent = dict['form.mailtoNote'];
     } else {
       try {
         const response = await fetch(FORMSPREE_ENDPOINT, {
@@ -171,13 +173,13 @@ function initContactForm() {
           body: new FormData(form),
         });
         if (response.ok) {
-          note.textContent = '¡Mensaje enviado! Te responderé pronto.';
+          note.textContent = dict['form.successNote'];
           form.reset();
         } else {
-          note.textContent = 'Ocurrió un error al enviar. Intenta escribir directamente a ' + CONTACT_EMAIL;
+          note.textContent = dict['form.errorNote'] + ' ' + CONTACT_EMAIL;
         }
       } catch (err) {
-        note.textContent = 'Ocurrió un error al enviar. Intenta escribir directamente a ' + CONTACT_EMAIL;
+        note.textContent = dict['form.errorNote'] + ' ' + CONTACT_EMAIL;
       }
     }
   });
