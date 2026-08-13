@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTypingEffect();
   initScrollReveal();
   initHeaderShadowOnScroll();
+  initScrollProgress();
   initContactForm();
 });
 
@@ -100,10 +101,28 @@ function initTypingEffect() {
   tick();
 }
 
-/* ---------- Animaciones al hacer scroll (fade-in / slide-up) ---------- */
+/* ---------- Animaciones al hacer scroll (fade-in / slide-up, en cascada) ---------- */
 function initScrollReveal() {
   const items = document.querySelectorAll('.reveal');
   if (!items.length) return;
+
+  const STAGGER_STEP_MS = 60;
+  const STAGGER_MAX_MS = 300;
+
+  // Escalona la entrada de elementos que comparten contenedor (grids de
+  // skills, proyectos, certificaciones, timeline) para un efecto en cascada.
+  const groups = new Map();
+  items.forEach((el) => {
+    const parent = el.parentElement;
+    if (!groups.has(parent)) groups.set(parent, []);
+    groups.get(parent).push(el);
+  });
+  groups.forEach((siblings) => {
+    if (siblings.length < 2) return;
+    siblings.forEach((el, i) => {
+      el.style.transitionDelay = Math.min(i * STAGGER_STEP_MS, STAGGER_MAX_MS) + 'ms';
+    });
+  });
 
   if (!('IntersectionObserver' in window)) {
     items.forEach((el) => el.classList.add('is-visible'));
@@ -134,6 +153,21 @@ function initHeaderShadowOnScroll() {
     header.style.boxShadow = window.scrollY > 8 ? '0 2px 12px rgba(0,0,0,0.06)' : 'none';
   };
   window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+}
+
+/* ---------- Barra de progreso de scroll ---------- */
+function initScrollProgress() {
+  const bar = document.getElementById('scroll-progress');
+  if (!bar) return;
+
+  const onScroll = () => {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+    bar.style.width = progress + '%';
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
   onScroll();
 }
 
