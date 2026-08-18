@@ -624,10 +624,11 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 .project-links {
   margin-top: auto;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: stretch;
   gap: 0.6rem;
 }
-.project-links .btn { margin-top: 0; }
+.project-links .btn { margin-top: 0; width: 100%; }
 
 /* ============================================================
    TIMELINE (formación)
