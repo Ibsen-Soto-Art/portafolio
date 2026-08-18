@@ -4,6 +4,8 @@
    efecto typing en terminal, scroll reveal, formulario contacto.
    ============================================================ */
 
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 document.addEventListener('DOMContentLoaded', () => {
   setFooterYear();
   initMobileMenu();
@@ -12,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initHeaderShadowOnScroll();
   initScrollProgress();
+  initScrollSpy();
+  initStatCounters();
   initContactForm();
 });
 
@@ -69,6 +73,12 @@ function initTypingEffect() {
 
   const stack = ['PHP', 'Laravel', 'MySQL', 'PostgreSQL', 'Docker', 'R'];
   const commandPrefix = 'stack --list ';
+
+  if (prefersReducedMotion) {
+    target.textContent = commandPrefix + stack[0];
+    return;
+  }
+
   let stackIndex = 0;
   let charIndex = 0;
   let deleting = false;
@@ -169,6 +179,77 @@ function initScrollProgress() {
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', onScroll);
   onScroll();
+}
+
+/* ---------- Indicador de sección activa en el nav ---------- */
+function initScrollSpy() {
+  const sections = document.querySelectorAll('main section[id]');
+  const links = document.querySelectorAll('.main-nav a[href^="#"]');
+  if (!sections.length || !links.length || !('IntersectionObserver' in window)) return;
+
+  const linkFor = (id) =>
+    document.querySelector(`.main-nav a[href="#${id}"]`);
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        links.forEach((link) => link.classList.remove('is-active'));
+        const active = linkFor(entry.target.id);
+        if (active) active.classList.add('is-active');
+      });
+    },
+    { rootMargin: '-45% 0px -50% 0px', threshold: 0 }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+}
+
+/* ---------- Contador animado de la franja de estadísticas ---------- */
+function initStatCounters() {
+  const items = document.querySelectorAll('.stat-number[data-count-to]');
+  if (!items.length) return;
+
+  const animateCount = (el) => {
+    const target = parseFloat(el.getAttribute('data-count-to'));
+    const suffix = el.getAttribute('data-suffix') || '';
+
+    if (prefersReducedMotion) {
+      el.textContent = target + suffix;
+      return;
+    }
+
+    const duration = 1200;
+    const start = performance.now();
+
+    function tick(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+      const value = Math.round(target * eased);
+      el.textContent = value + suffix;
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  };
+
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(animateCount);
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateCount(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  items.forEach((el) => observer.observe(el));
 }
 
 /* ---------- Formulario de contacto ----------

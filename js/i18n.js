@@ -48,6 +48,10 @@ const TRANSLATIONS = {
     'about.h2desc': 'SRS bajo IEEE 830, UML, arquitectura de software desde el primer día del proyecto.',
     'about.h3title': 'Gestión de proyectos',
     'about.h3desc': 'Experiencia real coordinando equipos, cronogramas y objetivos multidisciplinares.',
+    'about.stat1': 'Proyectos en producción',
+    'about.stat2': 'Cobertura de tests en proVida',
+    'about.stat3': 'Certificación PHP — SENA',
+    'about.stat4': 'Promedio en Biología',
 
     'skills.tag': '02 · Stack',
     'skills.title': 'Tecnologías y habilidades',
@@ -229,6 +233,10 @@ const TRANSLATIONS = {
     'about.h2desc': 'SRS under IEEE 830, UML, and software architecture from day one of the project.',
     'about.h3title': 'Project management',
     'about.h3desc': 'Real experience coordinating teams, schedules, and multidisciplinary goals.',
+    'about.stat1': 'Production projects',
+    'about.stat2': 'Test coverage in proVida',
+    'about.stat3': 'PHP certification — SENA',
+    'about.stat4': 'Biology GPA',
 
     'skills.tag': '02 · Stack',
     'skills.title': 'Technologies & skills',
