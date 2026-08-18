@@ -83,6 +83,16 @@ const TRANSLATIONS = {
       endpoints sin autenticación — evidencia de conciencia en buenas prácticas de seguridad.`,
     'proj.compraylisto.role': 'Rol: desarrollador full-stack',
 
+    'proj.provida.desc1': `Simulador de vida digital inspirado en Avida (Michigan State University),
+      construido desde cero en Python: organismos digitales autorreplicantes corren
+      sobre una máquina virtual propia, compiten por CPU y memoria, mutan al copiarse,
+      y resuelven tareas lógicas para obtener más ciclos de ejecución.`,
+    'proj.provida.desc2': `<strong>Hallazgo verificado con datos:</strong> partiendo de un empate 50/50, el
+      genotipo con ventaja metabólica termina dominando el 100% de una población de 225
+      organismos en 100 000 turnos — con un control nulo que confirma que no es azar.
+      79 pruebas automatizadas, 100% de cobertura.`,
+    'proj.provida.role': 'Rol: diseño y desarrollo end-to-end (VM, motor evolutivo, demo en vivo), con enfoque de biólogo en el diseño experimental',
+
     'proj.faceco.desc1': `SaaS de facturación electrónica para microempresarios, orientado al cumplimiento
       normativo DIAN (UBL 2.1, CUFE con SHA-384). SRS con 63 requisitos y plan de desarrollo
       de 12 fases, sobre stack PHP/Laravel/MySQL con entorno Docker.`,
@@ -114,6 +124,7 @@ const TRANSLATIONS = {
 
     'btn.viewProject': 'Ver proyecto ↗',
     'btn.viewRepo': 'Ver repositorio ↗',
+    'btn.viewLive': 'Simulación en vivo ↗',
 
     'edu.tag': '04 · Formación',
     'edu.title': 'Formación académica',
@@ -253,6 +264,16 @@ const TRANSLATIONS = {
       unauthenticated endpoints — evidence of security best-practice awareness.`,
     'proj.compraylisto.role': 'Role: full-stack developer',
 
+    'proj.provida.desc1': `Digital-life simulator inspired by Avida (Michigan State University),
+      built from scratch in Python: self-replicating digital organisms run on a custom
+      virtual machine, compete for CPU and memory, mutate as they copy themselves,
+      and solve logic tasks to earn extra execution cycles.`,
+    'proj.provida.desc2': `<strong>Data-verified finding:</strong> starting from a 50/50 tie, the
+      genotype with a metabolic edge ends up dominating 100% of a 225-organism population
+      within 100,000 updates — with a null control confirming it isn't chance.
+      79 automated tests, 100% coverage.`,
+    'proj.provida.role': "Role: end-to-end design & development (VM, evolution engine, live demo), with a biologist's approach to experimental design",
+
     'proj.faceco.desc1': `Electronic invoicing SaaS for microentrepreneurs, built for DIAN regulatory
       compliance (UBL 2.1, CUFE with SHA-384). SRS with 63 requirements and a 12-phase
       development plan, on a PHP/Laravel/MySQL stack with a Docker setup.`,
@@ -284,6 +305,7 @@ const TRANSLATIONS = {
 
     'btn.viewProject': 'View project ↗',
     'btn.viewRepo': 'View repository ↗',
+    'btn.viewLive': 'Live simulation ↗',
 
     'edu.tag': '04 · Education',
     'edu.title': 'Academic background',

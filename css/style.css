@@ -566,6 +566,7 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 .project-banner[data-tone="d"] { background: linear-gradient(135deg, #4c1d95, #7c3aed); }
 .project-banner[data-tone="e"] { background: linear-gradient(135deg, #0f172a, #334155); }
 .project-banner[data-tone="f"] { background: linear-gradient(135deg, #831843, #db2777); }
+.project-banner[data-tone="g"] { background: linear-gradient(135deg, #0f766e, #06b6d4); }
 
 .project-banner-icon {
   display: flex;
@@ -619,6 +620,14 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 }
 
 .project-body .btn { margin-top: auto; align-self: flex-start; }
+
+.project-links {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.project-links .btn { margin-top: 0; }
 
 /* ============================================================
    TIMELINE (formación)
